@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">DeviceChart</string>
+    <string name="back">Back</string>
+    <string name="edit">edit</string>
+    <string name="name">Name</string>
+    <string name="top_apps">TOP APPS</string>
+    <string name="online_status">Online</string>
+    <string name="paused_status">Paused</string>
+    <string name="today">Today</string>
+    <string name="h">h</string>
+    <string name="minute">32</string>
+    <string name="m">m</string>
+    <string name="last_bandwidth_test">Last Bandwidth Test</string>
+    <string name="download_speed">175</string>
+    <string name="mbps">Mbps</string>
+    <string name="upload_speed">45</string>
+    <string name="hh_mm">h:m</string>
+    <string name="hour">12</string>
+    <string name="options">OPTIONS</string>
+    <string name="add_me_to_layout">Add me to layout</string>
+    <string name="day">Day</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+</resources>

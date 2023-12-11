@@ -1,0 +1,114 @@
+{
+  "profileId": "64e46684f3395c3df0a2026f",
+  "name": "Elizabeth",
+  "avatarUrl": "https://s3-us-west-2.amazonaws.com/map-package/avatar/b0a1f9db-6933-4591-8bed-050984dae500/c3505829-ad51-4313-af1e-b166657b3d8b.jpg",
+  "isBlocked": false,
+  "webCount": 0,
+  "appCount": 0,
+  "timeLimitStatus": "None",
+  "speedtest": [
+    {
+      "downloadRate": 10,
+      "uploadRate": 19,
+      "phyLinkRate": 1000,
+      "hitCpuLimit": 0
+    }
+  ],
+  "timeUsage": [
+    {
+      "type": "day",
+      "totalUsage": 0,
+      "usage": [
+        {
+          "name": "Facebook",
+          "duration": 10600
+        },
+        {
+          "name": "Google Play Store",
+          "duration": 7280
+        },
+        {
+          "name": "Whatsapp",
+          "duration": 1600
+        },
+        {
+          "name": "Twitter",
+          "duration": 670
+        },
+        {
+          "name": "Microsoft",
+          "duration": 100
+        }
+      ]
+    }, {
+      "type": "week",
+      "totalUsage": 0,
+      "usage": [
+        {
+          "name": "Facebook",
+          "duration": 106000
+        },
+        {
+          "name": "Google Play Store",
+          "duration": 72800
+        },
+        {
+          "name": "Whatsapp",
+          "duration": 16000
+        },
+        {
+          "name": "Twitter",
+          "duration": 6700
+        },
+        {
+          "name": "Microsoft",
+          "duration": 1000
+        }
+      ]
+    },{
+      "type": "month",
+      "totalUsage": 0,
+      "usage": [
+        {
+          "name": "Facebook",
+          "duration": 1060000
+        },
+        {
+          "name": "Google Play Store",
+          "duration": 728000
+        },
+        {
+          "name": "Whatsapp",
+          "duration": 160000
+        },
+        {
+          "name": "Twitter",
+          "duration": 67000
+        },
+        {
+          "name": "Microsoft",
+          "duration": 10000
+        }
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "deviceId": "201d77dc-a721-40a2-9506-d9f02a100656",
+      "name": "phone",
+      "isOnline": true,
+      "ifType": "wifi",
+      "type": 1,
+      "ipAddr": "192.168.3.117"
+    },
+    {
+      "deviceId": "f2455571-2ade-4e1b-85a4-601cd281c05b",
+      "name": "Google Pixel 6a",
+      "isOnline": false,
+      "ifType": "wifi",
+      "type": 0,
+      "ipAddr": "192.168.3.212"
+    }
+  ],
+  "isScheduledBlocked": false
+}
