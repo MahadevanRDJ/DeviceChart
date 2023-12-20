@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -32,6 +33,10 @@ android {
     buildFeatures {
         dataBinding = true
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
@@ -59,4 +64,8 @@ dependencies {
 
     //MPAndroidChart
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    //Kotlin
+    implementation ("androidx.core:core-ktx:1.8.0")
+    implementation ("org.jetbrains.kotlin:kotlin-bom:1.8.0")
 }

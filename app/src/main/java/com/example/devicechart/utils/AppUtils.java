@@ -79,7 +79,7 @@ public class AppUtils {
         leftAxis.setTextSize(11f);
         leftAxis.setTypeface(Typeface.MONOSPACE);
         leftAxis.setAxisMinimum(0f);
-        float max = USAGE.get(0).getDuration();
+        float max = USAGE.get(0).duration;
         System.out.println(max);
         leftAxis.setAxisMaximum(max);
 
@@ -115,7 +115,7 @@ public class AppUtils {
     public static HourMinute totalTimeUsage() {
         AtomicInteger total = new AtomicInteger();
         USAGE.forEach(
-                it -> total.addAndGet(it.getDuration())
+                it -> total.addAndGet(it.duration)
         );
         return AppUtils.convertDurationToHourMinute(total.get());
     }

@@ -100,11 +100,11 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void setTimeAndSpeedUsage() {
         HourMinute data = AppUtils.totalTimeUsage();
-        hourText.setText(String.valueOf(data.getHour()));
-        minuteText.setText(String.valueOf(data.getMinute()));
-        SpeedTest speedTest = DEVICE.getSpeedTest().get(DEVICE.getSpeedTest().size() - 1);
-        downloadSpeedText.setText(speedTest.getDownloadRate() + "");
-        uploadSpeedTest.setText(speedTest.getUploadRate() + "");
+        hourText.setText(String.valueOf(data.hour));
+        minuteText.setText(String.valueOf(data.minute));
+        SpeedTest speedTest = DEVICE.speedTest.get(DEVICE.speedTest.size() - 1);
+        downloadSpeedText.setText(speedTest.downloadRate + "");
+        uploadSpeedTest.setText(speedTest.uploadRate + "");
 
     }
 
@@ -167,8 +167,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setProfileSection() {
-        loadProfileImageFromURL(profileAvatar, DEVICE.getAvatarUrl());
-        profileName.setText(DEVICE.getName());
+        loadProfileImageFromURL(profileAvatar, DEVICE.avatarUrl);
+        profileName.setText(DEVICE.name);
         setOnlineOrOffline(profileAvatar);
 
     }
@@ -180,22 +180,22 @@ public class MainActivity extends AppCompatActivity {
 
         switch (CHART_TYPE) {
             case "Month": {
-                USAGE = DEVICE.getTimeUsage().get(2).getUsage();
+                USAGE = DEVICE.timeUsage.get(2).usage;
                 break;
             }
             case "Week": {
-                USAGE = DEVICE.getTimeUsage().get(1).getUsage();
+                USAGE = DEVICE.timeUsage.get(1).usage;
                 break;
             }
             default:
-                USAGE = DEVICE.getTimeUsage().get(0).getUsage();
+                USAGE = DEVICE.timeUsage.get(0).usage;
                 break;
         }
 
         setTimeAndSpeedUsage();
         dayText.setText(CHART_TYPE);
         for (int i = 0; i < USAGE.size(); i++)
-            entries.add(new BarEntry(i, USAGE.get(i).getDuration()));
+            entries.add(new BarEntry(i, USAGE.get(i).duration));
         BarDataSet barDataSet = new BarDataSet(entries, "");
         AppUtils.initBarDataSet(barDataSet);
         BarData barData = new BarData(barDataSet);
@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setOnlineOrOffline(AvatarView profileAvatar) {
-        if (DEVICE.isBlocked()) {
+        if (DEVICE.isBlocked) {
             profileAvatar.setAvatarBorderColor(Color.YELLOW);
             profileAvatar.setIndicatorColor(Color.YELLOW);
             profileStatus.setText(R.string.paused_status);
