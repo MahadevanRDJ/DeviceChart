@@ -13,8 +13,11 @@ import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ImageSpan;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -94,6 +97,23 @@ public class MainActivity extends AppCompatActivity {
         myView.setHighlightColor(getResources().getColor(android.R.color.transparent));
         // Make sure the TextView can be clicked.
         myView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        LinearLayout optionLayout = mainBinding.options;
+        LinearLayout layout = new LinearLayout(this);
+
+        layout.setLayoutParams(
+                new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+        );
+        layout.setOrientation(LinearLayout.HORIZONTAL);
+        layout.addView(myView);
+        layout.setGravity(Gravity.CENTER_VERTICAL);
+
+        layout.layout(24, 12, 24, 0);
+
+        optionLayout.addView(layout);
 
     }
 
