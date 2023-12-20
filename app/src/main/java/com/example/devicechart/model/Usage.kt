@@ -14,8 +14,8 @@ class Usage {
         hourMinute = calculateHourMinute()
     }
 
-    fun calculateHourMinute(): HourMinute? {
-        return AppUtils.convertDurationToHourMinute(this.duration)
+    fun calculateHourMinute(): HourMinute {
+        return AppUtils.convertDurationToHourMinute(duration)
     }
 
 }
