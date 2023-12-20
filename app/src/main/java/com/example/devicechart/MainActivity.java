@@ -8,17 +8,9 @@ import static com.example.devicechart.utils.AppUtils.USAGE;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
-import android.text.style.ImageSpan;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -65,36 +57,6 @@ public class MainActivity extends AppCompatActivity {
         initView();
         setProfileSection();
         showBarChart();
-        setSumma();
-    }
-
-    private void setSumma() {
-
-        // Get a string that can be spanned with an ImageSpan and a ClickableSpan.
-        SpannableString ss = new SpannableString("Some text ");
-        // This will be the image. I use a resource here, but there are constructors that can
-        // accept a Drawable. See BitmapDrawable at https://developer.android.com/reference/android/graphics/drawable/BitmapDrawable#BitmapDrawable(android.content.res.Resources,%20android.graphics.Bitmap)
-
-        ImageSpan imgSpan = new ImageSpan(this, R.drawable.person_48, ImageSpan.ALIGN_CENTER);
-        ClickableSpan cs = new ClickableSpan() {
-            @Override
-            public void onClick(@NonNull View widget) {
-                Toast.makeText(MainActivity.this, "Clicked!", Toast.LENGTH_SHORT).show();
-            }
-        };
-
-        // The image will overlay the last blank in the text.
-        ss.setSpan(imgSpan, ss.length() - 1, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        // The clickable span will overlay the image from the ImageSpan.
-        ss.setSpan(cs, ss.length() - 1, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        // Just a TextView.
-        TextView myView = new TextView(this);
-        myView.setText(ss);
-        // Prevent the ImageSpan from showing a highlight on click.
-        myView.setHighlightColor(getResources().getColor(android.R.color.transparent));
-        // Make sure the TextView can be clicked.
-        myView.setMovementMethod(LinkMovementMethod.getInstance());
-
     }
 
     @SuppressLint("SetTextI18n")
